@@ -1,0 +1,53 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Eni Plenitude",
+        "description": "Credentials of the Eni Plenitude customer area (email login, not Google/Apple).",
+        "data": {
+          "username": "Email",
+          "password": "Password",
+          "price_per_kwh": "Average price (€/kWh)"
+        },
+        "data_description": {
+          "price_per_kwh": "All-in price used to compute the cost statistics. You can change it later."
+        }
+      },
+      "pod": {
+        "title": "Choose the supply",
+        "data": { "pod": "POD" }
+      },
+      "reauth_confirm": {
+        "title": "Log in again",
+        "description": "Eni Plenitude rejected the credentials of {username}.",
+        "data": { "password": "Password" }
+      }
+    },
+    "error": {
+      "invalid_auth": "Invalid email or password.",
+      "captcha_required": "The portal is asking for a captcha. Log in once on eniplenitude.com from a browser, then retry.",
+      "cannot_connect": "Cannot reach the Eni Plenitude portal (see the logs).",
+      "no_supplies": "No electricity supply with consumption data found in this account."
+    },
+    "abort": {
+      "already_configured": "This POD is already configured.",
+      "reauth_successful": "Credentials updated."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": { "price_per_kwh": "Average price (€/kWh)" },
+        "data_description": { "price_per_kwh": "Applies to newly imported hours only." }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "month_energy": { "name": "Monthly consumption" },
+      "month_cost": { "name": "Monthly estimated cost" },
+      "last_data": { "name": "Last available data" },
+      "price": { "name": "Price per kWh" }
+    }
+  }
+}

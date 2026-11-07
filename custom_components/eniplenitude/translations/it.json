@@ -1,0 +1,53 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Eni Plenitude",
+        "description": "Credenziali dell'Area Personale Eni Plenitude (accesso con email, non Google/Apple).",
+        "data": {
+          "username": "Email",
+          "password": "Password",
+          "price_per_kwh": "Prezzo medio (€/kWh)"
+        },
+        "data_description": {
+          "price_per_kwh": "Prezzo tutto compreso usato per le statistiche di costo. Puoi modificarlo in seguito."
+        }
+      },
+      "pod": {
+        "title": "Scegli la fornitura",
+        "data": { "pod": "POD" }
+      },
+      "reauth_confirm": {
+        "title": "Accedi di nuovo",
+        "description": "Eni Plenitude ha rifiutato le credenziali di {username}.",
+        "data": { "password": "Password" }
+      }
+    },
+    "error": {
+      "invalid_auth": "Email o password non validi.",
+      "captcha_required": "Il portale chiede un captcha. Accedi una volta da browser su eniplenitude.com e riprova.",
+      "cannot_connect": "Impossibile raggiungere il portale Eni Plenitude (vedi i log).",
+      "no_supplies": "Nessuna fornitura luce con dati di consumo trovata in questo account."
+    },
+    "abort": {
+      "already_configured": "Questo POD è già configurato.",
+      "reauth_successful": "Credenziali aggiornate."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": { "price_per_kwh": "Prezzo medio (€/kWh)" },
+        "data_description": { "price_per_kwh": "Si applica solo alle ore importate da ora in poi." }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "month_energy": { "name": "Consumo mensile" },
+      "month_cost": { "name": "Costo stimato mensile" },
+      "last_data": { "name": "Ultimo dato disponibile" },
+      "price": { "name": "Prezzo per kWh" }
+    }
+  }
+}
